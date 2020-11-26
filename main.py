@@ -13,7 +13,6 @@ def choose_from_list():
     #choses a random integer from 0 to the number equal to the length of the data
     random_number = randint(0, len(data) - 1)
     chosen_data = data[random_number]
-    data.pop(random_number)
     return chosen_data
     
 def choose_A_and_B():
@@ -23,6 +22,8 @@ def choose_A_and_B():
     chosen_data_list = []
     for _ in range(2):
         chosen_data_list.append(choose_from_list())
+    if chosen_data_list[0] == chosen_data_list[1]:
+        choose_A_and_B()
     return chosen_data_list
     
 
