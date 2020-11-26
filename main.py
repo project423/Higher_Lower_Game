@@ -28,6 +28,10 @@ def choose_A_and_B():
 
     
 def play_game():
+    '''
+    Void function
+    Has the game logic and plays the game
+    '''
     score = 0
     play = True
     game_lost = False
@@ -66,6 +70,10 @@ def play_game():
 
 
 def play_again():
+    '''
+        Void Function
+        Asks the user if the user wants to keep playing
+    '''
     keep_playing = True
     play_game()
     while keep_playing:
