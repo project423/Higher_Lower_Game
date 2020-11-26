@@ -35,9 +35,13 @@ def play_game():
     score = 0
     play = True
     game_lost = False
+    # deconstructs the array to pick two values from the list to compare
+    a,b = choose_A_and_B()
     while play:
-        # deconstructs the array to pick two values from the list to compare
-        a,b = choose_A_and_B()
+        # moves what was b to a then chooses a new random dictionary for b
+        a = b
+        b = choose_from_list()
+        
         if not game_lost:
             print(logo)
         if score > 0:            
